@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState } from 'react';
+import { StaticImage } from "gatsby-plugin-image"
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
     Collapse,
@@ -29,8 +30,16 @@ const NavBar = (props) => {
         <div>
         <NavBarStc>
           <Navbar className='navbar' light expand="md">
-            <NavbarBrand href="/">
-                <img width="50%" src="../images/gatsby-icone.png" alt="DesignKoncept" />
+           <NavbarBrand href="/">
+            <StaticImage className='img'
+              src="../images/LogoDesignKoncep.png"
+              width={300}
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt=""
+              style={{ marginBottom: `1.45rem`,
+              cursor: `pointer` }}
+            />
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
