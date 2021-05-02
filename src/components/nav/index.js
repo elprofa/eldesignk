@@ -7,6 +7,9 @@ import FormControl from 'react-bootstrap/FormControl'
 //import Nav from 'react-bootstrap/Nav'
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
+    Row,
+    Col,
+    Container,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -32,44 +35,58 @@ const NavBar = (props) => {
       const toggle = () => setIsOpen(!isOpen);
     
       return (
-        <div>
         <NavBarStc>
-          <Navbar className='navbar' light expand="md">
-            <NavbarBrand href="/">reactstrap</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar>
-              <Nav className="mr-auto" navbar>
-                <NavItem>
-                  <NavLink href="/components/">Components</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    Options
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>
-                      Option 1
-                    </DropdownItem>
-                    <DropdownItem>
-                      Option 2
-                    </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                      Reset
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </Nav>
-              <NavbarText className='mx-1'>Acceuil</NavbarText><br/>
-              <NavbarText className='mx-1'>Catalogue</NavbarText><br/>
-              <NavbarText className='mx-1'>Contact</NavbarText>
-            </Collapse>
-          </Navbar>
-          </NavBarStc>
-        </div>
+          <section className="sectionHeader">
+            <Container>
+              <nav>
+                <Navbar className='navbar' light expand="md">
+                  <NavbarBrand href="/">reactstrap</NavbarBrand>
+                  <NavbarToggler onClick={toggle} />
+                  <Collapse isOpen={isOpen} navbar>
+                    <Nav className="mr-auto" navbar>
+                      <NavItem>
+                        <NavLink href="/components/">Components</NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                      </NavItem>
+                      <UncontrolledDropdown nav inNavbar>
+                        <DropdownToggle nav caret>
+                          Options
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                          <DropdownItem>
+                            Option 1
+                          </DropdownItem>
+                          <DropdownItem>
+                            Option 2
+                          </DropdownItem>
+                          <DropdownItem divider />
+                          <DropdownItem>
+                            Reset
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </UncontrolledDropdown>
+                    </Nav>
+                    <NavbarText className='mx-1'>Acceuil</NavbarText><br/>
+                    <NavbarText className='mx-1'>Catalogue</NavbarText><br/>
+                    <NavbarText className='mx-1'>Contact</NavbarText>
+                  </Collapse>
+                </Navbar>
+                </nav>
+            </Container>
+          </section>
+          <section className="sectionHeader1">
+              <Container>
+          
+                <Row className="afterHeader">
+                  <Col lg={12}>
+                    <h1>D<span >esign</span>et<span>ko</span>ncept</h1>
+                  </Col>
+                </Row>
+              </Container>
+          </section>
+        </NavBarStc>
       );
     }
     

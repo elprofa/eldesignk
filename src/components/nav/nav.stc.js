@@ -1,11 +1,27 @@
 import styled from "styled-components";
 
- const NavBarStc = styled.nav`
-
+ const NavBarStc = styled.section`
+    .sectionHeader
+    {
+        border-bottom:1px solid #f3f3f3;
+    }
+    .afterHeader h1
+    {
+        color: #fff;
+        font-weight: 100;
+        span
+        {
+            font-weight:600;
+        }
+    }
+    .sectionHeader1
+    {
+        padding: 20px;
+        background: #000;
+    }
     .navbar
     {
-        border-bottom: 5px solid #f3f2f2;
-        background: red !important;
+        background: transparent !important;
         font-weight: 600px;
         font-family: 'Franklin Gothic Medium', 
                     'Arial Narrow', 

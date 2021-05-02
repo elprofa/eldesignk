@@ -7,26 +7,23 @@ import Seo from "../components/seo"
 import NavBar from "../components/nav/index"
 import { Container, Row, Col } from "reactstrap"
 import styled from "styled-components"; 
+import ModalDetail from '../components/ModalDetail'
+import { AiOutlineHome } from "react-icons/ai";
+import { useState } from "react"
+
+const ContainerStyle=styled(Container)`
+    max-width:100% !important;
+`;
 
  const Contner = styled.div`
 
- .contner
- {
-   display: flex;
-   flex-direction: column;
-   flex-wrap: nowrap;
-   background: beige;
-  // width: 100%;
-   //height: 100vh;
- }
-
  .ranger-un
  {
-   background: yellow;
+   background: #f7931e;
  }
  .ranger-un:hover
  {
-   background: azure;
+   background: #fff;
    transition: .9s;
    width: 40%;
    flex: 3;
@@ -34,77 +31,165 @@ import styled from "styled-components";
 
  .ranger-deux
  {
-   background: blue;
+   background: #42210b;
  }
  .ranger-deux:hover
  {
-   background: bisque;
+   background: #fff;
    transition: .9s;
    flex: 3;
  }
-
+/* 
  .ranger-deux
  {
    background: blue;
- }
+ } */
  .ranger-deux:hover
  {
-   background: oldlace;
+   background: #fff;
    transition: .9s;
    flex: 3;
  }
 
  .ranger-trois
  {
-   background: green;
+   background: #c1272d;
  }
  .ranger-trois:hover
  {
-   background: firebrick;
+   background: #fff;
    transition: .9s;
    flex: 3;
  }
 
  .ranger-quatre
  {
-   background: skyblue;
+   background: #f15a24;
  }
  .ranger-quatre:hover
  {
-   background: rebeccapurple;
+   background: #fff;
    transition: .9s;
    flex: 3;
  }
 
+ .column {
+    height: 100vh;
+    .appercu
+    {
+      display:none;
+    }
+
+    span 
+    {
+      font-size:50px;
+      font-size: 50px;
+      color: #fff;
+      font-weight: 700;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+}
+
+.column:hover 
+{
+  .appercu
+    {
+      display:block;
+    }
+    span 
+    {
+      color:#000;
+      font-size:30px;
+      margin: auto;
+      position: relative;
+      top: 0px;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #000;
+      padding: 10px;
+      cursor: pointer;
+      
+    }
+}
+
+.modal-dialog
+{
+  width: 100% !important;
+  max-width: 100%;
+  top: 0;
+  margin: 0;
+  height: 100vh !important;
+}
 `;
 
 
-
-
 const IndexPage = () => (
-
   <Contner className='contner'>
     <NavBar/>
-  <Container>
+  <ContainerStyle>
     <Row >
-      <Col className='ranger-un'>
-        1
+      <Col className='ranger-un column'>
+        <div className="appercu">
+          
+          <StaticImage className= 'img' id= 'img'
+            src="../images/home.png"
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="A Gatsby astronaut"
+            style={{ marginBottom: `1.45rem`,
+                    cursor: `pointer` }}
+          />
+        </div>
+        <ModalDetail />
+      
       </Col>
 
-      <Col className='ranger-deux'>
-        2
+      <Col className='ranger-deux column'>
+      <div className="appercu">
+          <StaticImage className= 'img' id= 'img'
+            src="../images/lamp.png"
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="A Gatsby astronaut"
+            style={{ marginBottom: `1.45rem`,
+                    cursor: `pointer` }}
+          />
+        </div>
+        <span>LAMP</span>
       </Col>    
 
-    <Col className='ranger-trois' >
-      3
+    <Col className='ranger-trois column' >
+    <div className="appercu">
+          <StaticImage className= 'img' id= 'img'
+            src="../images/menage.png"
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="A Gatsby astronaut"
+            style={{ marginBottom: `1.45rem`,
+                    cursor: `pointer` }}
+          />
+        </div>
+      <span>MENAGE</span>
     </Col>
 
-    <Col className='ranger-quatre'>
-    <Layout>
-    <Seo title="Home" />
-    <h1>Title</h1>
-    <p>Text content.</p>
-    <StaticImage className= 'img' id= 'img'
+    <Col className='ranger-quatre column'>
+    <div className="appercu">
+          <StaticImage className= 'img' id= 'img'
+            src="../images/gadget1.png"
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="A Gatsby astronaut"
+            style={{ marginBottom: `1.45rem`,
+                    cursor: `pointer` }}
+          />
+        </div>
+    <span>GADGET</span>
+    {/* <StaticImage className= 'img' id= 'img'
       src="../images/gatsby-astronaut.png"
       width={300}
       quality={95}
@@ -112,15 +197,11 @@ const IndexPage = () => (
       alt="A Gatsby astronaut"
       style={{ marginBottom: `1.45rem`,
               cursor: `pointer` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
+    /> */}
+    
   </Col>
 </Row>
-</Container>
+</ContainerStyle>
 </Contner>
 )
 
