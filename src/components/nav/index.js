@@ -6,6 +6,8 @@ import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 //import Nav from 'react-bootstrap/Nav'
 import "bootstrap/dist/css/bootstrap.min.css";
+import { StaticImage } from "gatsby-plugin-image"
+
 import {
     Row,
     Col,
@@ -40,7 +42,17 @@ const NavBar = (props) => {
             <Container>
               <nav>
                 <Navbar className='navbar' light expand="md">
-                  <NavbarBrand href="/">reactstrap</NavbarBrand>
+                  <NavbarBrand href="/" style={{paddingTop:"20px"}}>
+                  <StaticImage className= 'img' id= 'img'
+                    src="../../images/logo.png"
+                    height={80}
+                    quality={95}
+                    formats={["AUTO", "WEBP", "AVIF"]}
+                    alt="A Gatsby astronaut"
+                    style={{ marginBottom: `1.45rem`,
+                            cursor: `pointer` }}
+                  />
+                  </NavbarBrand>
                   <NavbarToggler onClick={toggle} />
                   <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>

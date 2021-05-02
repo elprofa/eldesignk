@@ -145,7 +145,7 @@ const IndexPage = () => (
                     cursor: `pointer` }}
           />
         </div>
-        <ModalDetail />
+        <ModalDetail texte="HOME" />
       
       </Col>
 
@@ -160,7 +160,7 @@ const IndexPage = () => (
                     cursor: `pointer` }}
           />
         </div>
-        <span>LAMP</span>
+        <ModalDetail texte="LAMP" />
       </Col>    
 
     <Col className='ranger-trois column' >
@@ -174,7 +174,7 @@ const IndexPage = () => (
                     cursor: `pointer` }}
           />
         </div>
-      <span>MENAGE</span>
+        <ModalDetail texte="MENAGE" />
     </Col>
 
     <Col className='ranger-quatre column'>
@@ -188,7 +188,7 @@ const IndexPage = () => (
                     cursor: `pointer` }}
           />
         </div>
-    <span>GADGET</span>
+        <ModalDetail texte="GADGET" />
     {/* <StaticImage className= 'img' id= 'img'
       src="../images/gatsby-astronaut.png"
       width={300}

@@ -4,6 +4,9 @@ import styled from "styled-components";
     .sectionHeader
     {
         border-bottom:1px solid #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+        background: #e6e6e6;
+        height: 120px;
     }
     .afterHeader h1
     {

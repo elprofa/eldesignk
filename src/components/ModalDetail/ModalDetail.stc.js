@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 const ModalDetailStc=styled.section`
-    .modal-dialog
+ 
+    .sectionDetail
     {
-    width: 100% !important;
-    max-width: 100%;
-    top: 0;
-    margin: 0;
-    height: 100vh !important;
+        height:60vh;
+        background:#ccc !important;
     }
 `;
 export default ModalDetailStc;
