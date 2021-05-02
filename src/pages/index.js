@@ -85,7 +85,7 @@ const IndexPage = () => (
 
   <Contner className='contner'>
     <NavBar/>
-  <Container>
+  <Container fluid>
     <Row >
       <Col className='ranger-un'>
         1

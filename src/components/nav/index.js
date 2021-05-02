@@ -29,9 +29,21 @@ const NavBar = (props) => {
         <div>
         <NavBarStc>
           <Navbar className='navbar' light expand="md">
-            <NavbarBrand href="/">DesignKoncept</NavbarBrand>
+            <NavbarBrand href="/">
+                <img width="50%" src="../images/gatsby-icone.png" alt="DesignKoncept" />
+            </NavbarBrand>
             <NavbarToggler onClick={toggle} />
-            <Collapse className='my-3' isOpen={isOpen} navbar>
+            <Collapse isOpen={isOpen} navbar>
+              <Nav className="mr-auto" navbar>
+                <NavItem>
+                  <NavLink href="/components/">Components</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                </NavItem>
+                <UncontrolledDropdown nav inNavbar>
+                </UncontrolledDropdown>
+              </Nav>
               <NavbarText className='mx-1'>Acceuil</NavbarText><br/>
               <NavbarText className='mx-1'>Catalogue</NavbarText><br/>
               <NavbarText className='mx-1'>Contact</NavbarText>

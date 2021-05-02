@@ -5,7 +5,7 @@ import styled from "styled-components";
     .navbar
     {
         border-bottom: 5px solid #f3f2f2;
-        background: red !important;
+        background: #63BADA !important;
         font-weight: 600px;
         font-family: 'Franklin Gothic Medium', 
                     'Arial Narrow', 
